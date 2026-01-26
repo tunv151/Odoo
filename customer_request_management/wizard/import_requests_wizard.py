@@ -65,3 +65,12 @@ class ImportRequestsWizard(models.TransientModel):
             
         except Exception as e:
             raise UserError(f'Error importing file: {str(e)}')
+
+
+
+    lead_id = fields.Many2one(
+        'crm.lead', 
+        string='Opportunity',
+        required=True,
+        default=lambda self: self._context.get('active_id')  # Lấy lead_id từ context
+    )

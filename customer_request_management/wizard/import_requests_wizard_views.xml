@@ -21,11 +21,11 @@
 
     <!-- Wizard Action -->
     <record id="action_import_requests_wizard" model="ir.actions.act_window">
-        <field name="name">Nhập Nhu cầu từ Excel</field>
+        <field name="name">Nhập nhu cầu từ Excel</field>
         <field name="res_model">import.requests.wizard</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
-        <field name="binding_model_id" ref="model_crm_lead"/>
-        <field name="binding_view_types">form</field>
+        <field name="context">{'default_lead_id': active_id}</field>  
+
     </record>
 </odoo>

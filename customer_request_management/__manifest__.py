@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "de01",
+    'name': "customer_request_management",
 
     'summary': "Quản lý lịch sử nhu cầu, chăm sóc KH và đơn hàng bán",
 
@@ -24,6 +24,7 @@ Nguyễn Văn Tú    """,
         "views/crm_customer_request_views.xml",
         "views/crm_lead_views.xml",
         'wizard/import_requests_wizard_views.xml',
+
     ],
     "installable": True,
     'application': False,
