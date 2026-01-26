@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_crm_customer_request_tree" model="ir.ui.view">
+        <field name="name">crm.customer.request.tree</field>
+        <field name="model">crm.customer.request</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" delete="0">
+                <field name="date" string="Ngày"/>
+                <field name="opportunity_id" string="Cơ hội"/>
+                <field name="product_id" string="Sản phẩm"/>
+                <field name="qty" string="Số lượng"/>
+                <field name="list_price" string="Đơn giá"/>
+                <field name="total_value" string="Tổng giá trị"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_crm_customer_request_form" model="ir.ui.view">
+        <field name="name">crm.customer.request.form</field>
+        <field name="model">crm.customer.request</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0" delete="0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="opportunity_id" string="Cơ hội"/>
+                            <field name="product_id" string="Sản phẩm"/>
+                            <field name="qty" string="Số lượng"/>
+                        </group>
+                        <group>
+                            <field name="date" string="Ngày"/>
+                            <field name="list_price" string="Đơn giá"/>
+                            <field name="total_value" string="Tổng giá trị"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" string="Mô tả"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- Action -->
+    <record id="action_crm_customer_request" model="ir.actions.act_window">
+        <field name="name">Nhu cầu khách hàng</field>
+        <field name="res_model">crm.customer.request</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu cùng cấp với Pipeline -->
+    <menuitem id="menu_crm_customer_request"
+              name="Nhu cầu khách hàng"
+              parent="crm.crm_menu_sales"
+              action="action_crm_customer_request"
+              sequence="2"/>
+</odoo>
