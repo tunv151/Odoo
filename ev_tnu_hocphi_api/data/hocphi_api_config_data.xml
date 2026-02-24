@@ -1,0 +1,13 @@
+<odoo>
+    <data noupdate="1">
+        <record id="ev_tnu_hocphi_api_config_general"
+                model="ev.tnu.hocphi.api.config">
+
+            <field name="name">Cấu hình API Học phí</field>
+            <field name="api_url">http://api.hocphi.tnu.edu.vn</field>
+            <field name="api_key">TNU_HOCPHI_API_KEY_2026</field>
+            <field name="active">True</field>
+
+        </record>
+    </data>
+</odoo>

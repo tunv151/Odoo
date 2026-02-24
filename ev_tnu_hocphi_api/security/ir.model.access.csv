@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ev_tnu_hocphi_api_config,access_ev_tnu_hocphi_api_config,model_ev_tnu_hocphi_api_config,,1,1,1,1
+access_ev_tnu_log_sync_receive_hocphi,access_ev_tnu_log_sync_receive_hocphi,model_ev_tnu_log_sync_receive_hocphi,,1,0,0,0
