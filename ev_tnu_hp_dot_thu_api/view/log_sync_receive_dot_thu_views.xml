@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_log_sync_receive_dot_thu_tree" model="ir.ui.view">
+        <field name="name">log.sync.receive.dot.thu.tree</field>
+        <field name="model">log.sync.receive.dot.thu</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="dot_thu_id"/>
+                <field name="state"/>
+                <field name="date_done"/>
+                <field name="ip_address"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_log_sync_receive_dot_thu_form" model="ir.ui.view">
+        <field name="name">log.sync.receive.dot.thu.form</field>
+        <field name="model">log.sync.receive.dot.thu</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="dot_thu_id"/>
+                        <field name="state"/>
+                        <field name="date_done"/>
+                        <field name="ip_address"/>
+                        <field name="params" widget="text"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_log_sync_receive_dot_thu" model="ir.actions.act_window">
+        <field name="name">Log đồng bộ đợt thu</field>
+        <field name="res_model">log.sync.receive.dot.thu</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
